@@ -1,6 +1,8 @@
-*.VC.db
+# Starter Content
+Content/StarterContent/
 
 # Visual Studio 2015 user specific files
+*.VC.db
 .vs/
 
 # Compiled Object files
