@@ -1,6 +1,7 @@
 // Copyright Oscar Crego 2016
 
 #include "BattleTank.h"
+#include "Tank.h"
 #include "TankPlayerController.h"
 
 void ATankPlayerController::BeginPlay()
