@@ -18,6 +18,7 @@ enum class EFiringState : uint8 {
 class UTankBarrel;
 class UTankTurret;
 
+
 // Hold Barrel's properties and Elevate Method
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class BATTLETANK_API UTankAimingComponent : public UActorComponent
@@ -32,7 +33,7 @@ public:
 
 protected:
 	UPROPERTY(BlueprintReadOnly, Category = "State")
-	EFiringState FiringState = EFiringState::Reloading;
+	EFiringState FiringState = EFiringState::Aiming;
 
 private:
 	// Sets default values for this component's properties
