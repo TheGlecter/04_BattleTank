@@ -101,7 +101,7 @@ void UTankAimingComponent::MoveBarrelTowards(FVector AimDirection)
 	// Move the Barrel the right ammount this frame
 	Barrel->Elevate(DeltaRotator.Pitch);
 	// Always yaw the shortest way
-	if (DeltaRotator.Yaw <= 180.f) {
+	if (FMath::Abs(DeltaRotator.Yaw) <= 180.f) {
 		Turret->Rotate(DeltaRotator.Yaw);
 	} else { Turret->Rotate(-DeltaRotator.Yaw); }
 }
