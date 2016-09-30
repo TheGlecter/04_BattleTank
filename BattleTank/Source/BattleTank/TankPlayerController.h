@@ -43,4 +43,10 @@ private:
 	float LineTraceRange = 1000000.f;
 
 	bool GetLookVectorHitLocation(FVector LookDirection, FVector& HitLocation) const;
+
+	// Called by the engine when a Pawn is possesed
+	virtual void SetPawn(APawn* InPawn) override;
+
+	UFUNCTION()
+	void OnPossesedTankDeath();
 };
