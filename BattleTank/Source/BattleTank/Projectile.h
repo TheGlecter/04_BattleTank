@@ -20,8 +20,14 @@ public:
 	// Called every frame
 	virtual void Tick( float DeltaSeconds ) override;
 
-	UProjectileMovementComponent* ProjectileMovement = nullptr;
-
 	void LaunchProjectile(float Speed);
+
+private:
+	UProjectileMovementComponent* ProjectileMovement = nullptr;
 	
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	UStaticMeshComponent* CollisionMesh = nullptr;
+	
+	UPROPERTY(VisibleAnywhere, Category = "Components")
+	UParticleSystemComponent* LaunchBlast = nullptr;
 };
